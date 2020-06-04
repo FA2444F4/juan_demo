@@ -87,3 +87,5 @@ function hideTips() {
     tip.style.display = 'none'
   })
 }
+new()
+{}
