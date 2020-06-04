@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>驾校考试模拟系统</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="main">
+    <header>
+      <p>驾校考试模拟系统</p>
+      <ul>
+        <li onclick="showMask(1)">
+          登录
+        </li>
+        <li onclick="showMask(0)">
+          注册
+        </li>
+      </ul>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+  </div>
+  <div class="mask" style="display: none">
+    <form action="">
+      <div id="login" class="form-container" style="display: block">
+        <p class="form-header">登录<span class="form-exit" onclick="hideMask()">x</span></p>
+        <label>
+          <input type="text" name="loginPhone" placeholder="请输入电话号码">
+        </label>
+        <label>
+          <input type="password" name="loginPassword" autocomplete placeholder="请输入密码">
+        </label>
+        <button type="button" onclick="login()">登录</button>
+        <p class="form-tips" id="loginTips" style="display: none">输入有误，请验证输入</p>
+        <p class="form-footer" onclick="showMask(0)">没有账号？请先<span style="color: cornflowerblue">注册</span></p>
+      </div>
+      <div id="register" class="form-container" style="display: none">
+        <p class="form-header">注册<span class="form-exit" onclick="hideMask()">x</span></p>        <label>
+          <input type="text" name="registerName" placeholder="请输入姓名">
+        </label>
+        <label>
+          <input type="text" name="registerPhone" placeholder="请输入电话号码">
+        </label>
+        <label>
+          <input type="password" name="registerPassword" autocomplete placeholder="请输入密码">
+        </label>
+        <button type="button" onclick="register()">注册</button>
+        <p class="form-tips" id="registerTips" style="display: none">输入有误，请验证输入</p>
+        <p class="form-footer" onclick="showMask(1)">已有账号？请<span style="color: cornflowerblue">登录</span></p>
+      </div>
+    </form>
+  </div>
+</body>
+<script src="ajax.js"></script>
+<script src="index.js"></script>
+</html>
